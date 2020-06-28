@@ -5,6 +5,9 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import kebabCase from "lodash/kebabCase"
+
+import "katex/dist/katex.min.css"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -27,6 +30,27 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           >
             {post.frontmatter.title}
           </h1>
+          {post.frontmatter.tags &&
+            <ul style={{ marginBottom: 0 }}>
+              {post.frontmatter.tags.map((tag) => {
+                return (
+                  <li
+                    style={{
+                      ...scale(-1 / 5),
+                      display: `inline`,
+                      position: `relative`,
+                      listStyle: `none`,
+                      fontWeight: `bold`,
+                      marginRight: rhythm(0.5),
+                      marginTop: rhythm(0.5),
+                    }}
+                  >
+                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                  </li>
+                )
+              })}
+            </ul>
+          }
           <p
             style={{
               ...scale(-1 / 5),
@@ -95,6 +119,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
   }
