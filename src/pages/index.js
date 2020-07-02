@@ -4,7 +4,8 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import { rhythm, scale } from "../utils/typography"
+import kebabCase from "lodash/kebabCase"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -28,6 +29,27 @@ const BlogIndex = ({ data, location }) => {
                   {title}
                 </Link>
               </h3>
+              {node.frontmatter.tags &&
+                <ul style={{ marginBottom: 0, marginLeft: 0 }}>
+                  {node.frontmatter.tags.map((tag) => {
+                    return (
+                      <li
+                        style={{
+                          ...scale(-1 / 5),
+                          display: `inline`,
+                          position: `relative`,
+                          listStyle: `none`,
+                          fontWeight: `bold`,
+                          marginRight: rhythm(0.5),
+                          marginTop: rhythm(0.5),
+                        }}
+                      >
+                        <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                      </li>
+                    )
+                  })}
+                </ul>
+              }
               <small>{node.frontmatter.date}</small>
             </header>
             <section>
@@ -64,6 +86,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            tags
           }
         }
       }
