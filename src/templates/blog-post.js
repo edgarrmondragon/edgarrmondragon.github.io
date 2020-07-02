@@ -31,7 +31,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             {post.frontmatter.title}
           </h1>
           {post.frontmatter.tags &&
-            <ul style={{ marginBottom: 0 }}>
+            <ul style={{ marginBottom: 0, marginLeft: 0 }}>
               {post.frontmatter.tags.map((tag) => {
                 return (
                   <li
