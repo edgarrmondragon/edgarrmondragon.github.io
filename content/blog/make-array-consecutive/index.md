@@ -15,9 +15,10 @@ If the **distinct** elements of the array are ![sorted](/home/spoton/Desktop/blo
 
 $$
 \begin{aligned}
-\sum_{i=1}^{n}{\left(x_i - x_{i-1} - 1\right)} &= \sum_{i=1}^{n}{x_i} - \sum_{i=1}^{n}{x_{i-1}} - \sum_{i=1}^{n}{1} \\
-&= (S - x_0) - (S - x_n) - (n - 1) \\
-&= x_n - x_0 - n + 1
+&\sum_{i=1}^{n}{\left(x_i - x_{i-1} - 1\right)} \\
+= &\sum_{i=1}^{n}{x_i} - \sum_{i=1}^{n}{x_{i-1}} - \sum_{i=1}^{n}{1} \\
+= &(S - x_0) - (S - x_n) - (n - 1) \\
+= &x_n - x_0 - n + 1
 \end{aligned}
 $$
 
