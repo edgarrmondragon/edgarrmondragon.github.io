@@ -15,7 +15,7 @@ const TagTemplate = ({ data, pageContext, location }) => {
   return (
     < Layout location={location} title={siteTitle} >
       <SEO
-        title={siteTitle}
+        title={`Posts tagged as "${tag}"`}
         description={`${tag} posts`}
       />
       <div>
