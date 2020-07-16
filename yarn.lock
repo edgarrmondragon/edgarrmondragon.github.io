@@ -14018,6 +14018,11 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
+typeface-cookie@^0.0.71:
+  version "0.0.71"
+  resolved "https://registry.yarnpkg.com/typeface-cookie/-/typeface-cookie-0.0.71.tgz#c1e4b6fa9769a8d9a233e6ef6c2932ef2a570f86"
+  integrity sha512-Ku3LfbmJLb2wL2Q47F76NytDiN3ra7fioU+rZuY/Zu8MovjDh7FGesSw3VPYKMv2z92hm4gr+RY4lvA0RPjNYA==
+
 typeface-merriweather@0.0.72:
   version "0.0.72"
   resolved "https://registry.yarnpkg.com/typeface-merriweather/-/typeface-merriweather-0.0.72.tgz#2b990f5293252052d51d170c82d3892319ff0555"

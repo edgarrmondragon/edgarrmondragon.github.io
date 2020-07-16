@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Tags from "../components/tags"
+import BMC from "../components/BuyMeACoffee/BuyMeACoffee"
 import { rhythm, scale } from "../utils/typography"
 
 import "katex/dist/katex.min.css"
@@ -49,8 +50,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             marginBottom: rhythm(1),
           }}
         />
-        <footer>
+        <footer style={{ textAlign: `center` }}>
           <Bio />
+          <BMC bmcHandle="lafaefe" />
         </footer>
       </article>
 
