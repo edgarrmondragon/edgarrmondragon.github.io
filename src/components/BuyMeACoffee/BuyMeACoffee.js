@@ -1,14 +1,19 @@
 import React from "react"
+import PropTypes from 'prop-types'
 
 import "typeface-cookie"
 import "./BuyMeACoffee.css"
 
-const BuyMeACoffee = ({ bmcHandle }) => (
+const BuyMeACoffee = ({ bmcHandle, buttonColor, textColor }) => (
   <a
     target="_blank"
     rel="noreferrer"
     href={`https://www.buymeacoffee.com/${bmcHandle}`}
     className="bmc-button"
+    style={{
+      color: `${textColor}`,
+      backgroundColor: `${buttonColor}`,
+    }}
   >
     <img
       src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg"
@@ -19,5 +24,16 @@ const BuyMeACoffee = ({ bmcHandle }) => (
     </span>
   </a>
 )
+
+BuyMeACoffee.defaultProps = {
+  buttonColor: '#5f7fff',
+  textColor: '#fff',
+}
+
+BuyMeACoffee.propTypes = {
+  bmcHandle: PropTypes.string,
+  buttonColor: PropTypes.string,
+  textColor: PropTypes.string,
+}
 
 export default BuyMeACoffee
