@@ -52,7 +52,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         />
         <footer style={{ textAlign: `center` }}>
           <Bio />
-          <BMC bmcHandle="lafaefe" />
+          <BMC bmcHandle="lafaefe" textColor="#222" buttonColor="#eee" />
         </footer>
       </article>
 
