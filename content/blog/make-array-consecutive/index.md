@@ -11,14 +11,14 @@ Based on a Javascript challenge by [@PizzaPokerGuy][1].
 
 ## Solution
 
-If the **distinct** elements of the array are ![sorted](/home/spoton/Desktop/blog/sorted.gif) in ascending order $x_0,x_1,...,x_n$, then the number of missing numbers is the sum of the differences between each consecutive pair minus one:
+If the **distinct** elements of the array are sorted in ascending order $x_1,x_2,...,x_n$, then the number of missing numbers is the sum of the differences between each consecutive pair minus one:
 
 $$
 \begin{aligned}
-&\sum_{i=1}^{n}{\left(x_i - x_{i-1} - 1\right)} \\
-= &\sum_{i=1}^{n}{x_i} - \sum_{i=1}^{n}{x_{i-1}} - \sum_{i=1}^{n}{1} \\
-= &(S - x_0) - (S - x_n) - (n - 1) \\
-= &x_n - x_0 - n + 1
+&\sum_{i=2}^{n}{\left(x_i - x_{i-1} - 1\right)} \\
+= &\sum_{i=2}^{n}{x_i} - \sum_{i=2}^{n}{x_{i-1}} - \sum_{i=2}^{n}{1} \\
+= &(S - x_1) - (S - x_n) - (n - 1) \\
+= &x_n - x_1 - n + 1
 \end{aligned}
 $$
 
